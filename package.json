@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint . --ext .ts,.tsx -c .eslintrc.json --fix",
-    "tsc": "tsc --noEmit"
+    "tsc": "tsc --noEmit",
+    "test": "echo \"No tests implemented yet\""
   },
   "dependencies": {
     "@heroui/button": "2.2.9",
