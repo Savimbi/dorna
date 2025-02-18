@@ -14,7 +14,7 @@ export default function IndexPage() {
             Welcome to dorna
           </span>
           <div className={subtitle({ class: "mt-4" })}>
-            Beautiful, fast and modern web development.
+            Beautiful, fast way to get modern web application.
           </div>
           <div>
           <HeartIcon/>
