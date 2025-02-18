@@ -1,0 +1,32 @@
+name: Build Next.js App
+
+on:
+  pull_request:
+    branches:
+      - develop
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20.16.0'  # Specify your Node.js version here
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Build Next.js App
+        run: npm run build
+
+      - name: Run TypeScript Compiler
+        run: npm run tsc --noEmit # Ensure you have a script in package.json for TypeScript check
+
+      # Optional: Run unit tests if you have any configured
+      - name: Run Tests
+        run: npm test
