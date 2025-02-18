@@ -1,12 +1,6 @@
-import { Link } from "@heroui/link";
-import { Snippet } from "@heroui/snippet";
-import { Code } from "@heroui/code";
-import { button as buttonStyles } from "@heroui/theme";
-
-import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
-import { GithubIcon } from "@/components/icons";
 import DefaultLayout from "@/layouts/default";
+import HeartIcon from "@/components/home/home-media";
 
 export default function IndexPage() {
   return (
@@ -22,34 +16,10 @@ export default function IndexPage() {
           <div className={subtitle({ class: "mt-4" })}>
             Beautiful, fast and modern web development.
           </div>
-        </div>
+          <div>
+          <HeartIcon/>
+          </div>
 
-        <div className="flex gap-3">
-          <Link
-            isExternal
-            className={buttonStyles({
-              color: "primary",
-              radius: "full",
-              variant: "shadow",
-            })}
-            href={siteConfig.links.docs}
-          >
-            Documentation
-          </Link>
-          <Link
-            isExternal
-            className={buttonStyles({ variant: "bordered", radius: "full" })}
-            href={siteConfig.links.github}
-          >
-            <GithubIcon size={20} />
-            GitHub
-          </Link>
-        </div>
-
-        <div className="mt-8">
-          <Snippet hideCopyButton hideSymbol variant="bordered">
-            
-          </Snippet>
         </div>
       </section>
     </DefaultLayout>
