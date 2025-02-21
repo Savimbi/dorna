@@ -8,9 +8,7 @@ export default function IndexPage() {
     <DefaultLayout>
       <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
         <div className="inline-block max-w-xl text-center justify-center">
-        <span className={title()}>
-            Welcome to Baka.me land<br />
-          </span>
+
           <span className={title()}>Land of &nbsp;</span>
           <span className={title({ color: "violet" })}>Possibilities&nbsp;</span>
           <br />
